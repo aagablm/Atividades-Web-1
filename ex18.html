@@ -7,42 +7,68 @@
 </head>
 
 <style>
-  body {
-    width: 100vw;
-    height: 100vh;
+ .tabelaMesclada {
+    width: 100%;
+    background-color: red;
+    border: 3px solid blue;
+}
+.A1 {
+    width: 10%;
+    align-content: start;
+    background-color: yellow;
+}
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+.A2 {
+    width: 40%;
+    height: 40px;
+    text-align: center;
+    background-color: white;
+    vertical-align: bottom;
+}
 
-  table {
-    width: 80%;
-    height: 20%;
+.A3 {
+    width: 50%;
+    text-align: center;
+    vertical-align: top;
+    background-color: orange;
+}
 
-  }
+.B2 {
+    width: 40%;
+    height: 50px;
+    text-align: center;
+    background-color: orange;    
+}
 
-  table, tr, td {
-    border: 1px solid black;
-    border-collapse: collapse;
-  }
+.B4 {
+    width: 30%;
+    text-align: center;
+    background-color: yellow;
+}
+
+.C1 {
+    width: 10%;
+    text-align: end;
+    background-color: orange;
+}
 </style>
 
 <body>
-  <table>
-    <tr>
-      <td style="width: 10%;" rowspan="2">A1</td>
-      <td style="width: 40%;text-align: center;vertical-align: bottom;">A2</td>
-      <td style="width: 50%;text-align: center;vertical-align: top;" colspan="3">A3</td>
+  <table class="tabelaMesclada">
+    <caption class="tituloMesclada">Tabela Mesclada</caption>
+    <tr class="trMesclada">
+        <td rowspan="2" class="A1" style="width: 10%;">A1</td>
+        <td class="A2">A2</td>
+        <td colspan="2" class="A3">A3</td>
     </tr>
-    <tr>
-      <td style="width: 40%; height: 50px;text-align: center;" colspan="2">B2</td>
-      <td style="width: 30%;text-align: center;" rowspan="2">B4</td>
+    <tr class="trMesclada">
+        <td colspan="2" class="B2">B2</td>
+        <td colspan="2" rowspan="2" class="B4">B4</td>
     </tr>
-    <tr>
-      <td style="width: 10%;text-align: end;" colspan="3">C1</td>
+    <tr class="trMesclada">
+        <td colspan="3" class="C1">C1</td>
     </tr>
-  </table>
+</table>
   <br>
   <a href="index.html">Exercícios</a>
 </body>
