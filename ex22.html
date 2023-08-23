@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios 19</title>
+</head>
+<style>
+    * {
+        font-family: Helvetica Neue, Helvetica;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+        color: black;
+    }
+
+    body {
+        font-size: 100%;
+    }
+
+    .cabecalho {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+        padding: 0.5%;
+        background-color: rgba(143, 143, 143, 0.5);
+    }
+
+    .cabecalho-2 {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        margin: 3%;
+    }
+
+    .menu {
+
+        display: flex;
+        gap: 32px;
+    }
+
+    .cabecalho-menu-item {
+        color: gray;
+        padding: 1%;
+        font-size: 18px;
+    }
+
+    .cabecalho-menu-item:hover {
+        color: black;
+    }
+
+    .cabecalho-menu-item-buscar {
+        border-radius: 20px;
+        border: 1px solid gray;
+        margin: 0;
+
+    }
+
+    .cabecalho-menu-item-buscar-inserir {
+        border: none;
+        margin: 5px;
+    }
+
+    .conteudo-principal {
+        margin: 2%;
+        display: flex;
+        flex-direction: row;
+        align-content: space-around;
+    }
+
+    .conteudo-principal-coluna {
+        margin: 2%;
+        display: flex;
+        width: 28%;
+        flex-direction: column;
+    }
+
+    .conteudo-principal-cards {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .cards {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    .cards-medio {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-around;
+        width: 22%;
+        margin: 1%;
+        padding: 1.5%;
+        border: 2px solid white 0.1;
+        box-sizing: border-box;
+        box-shadow: 0 5px 5px rgba(0, 0, 0, .6);
+        border-radius: 10px;
+        color: black;
+    }
+
+    .card-grande {
+        width: 93%;
+        margin: 2%;
+        padding: 1%;
+        border: 2px solid white 0.1;
+        box-sizing: border-box;
+        box-shadow: 0 5px 5px rgba(0, 0, 0, .6);
+        border-radius: 10px;
+        color: black;
+    }
+
+    .card-medio {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-around;
+        width: 28%;
+        margin: 0.5%;
+        padding: 1%;
+        border: 2px solid white 0.1;
+        box-sizing: border-box;
+        box-shadow: 0 5px 5px rgba(0, 0, 0, .6);
+        border-radius: 10px;
+        color: black;
+    }
+
+    .card:hover {
+        transform: rotateX(7deg) translateY(-6px);
+        -webkit-transition: -webkit-transform 0.6s;
+        -moz-transition: -moz-transform 0.6s;
+        -o-transition: -o-transform 0.6s;
+        transition: transform 0.6s;
+    }
+
+    .card-imagem {
+        padding: 2%;
+        width: 100%;
+        border-radius: 20px;
+    }
+
+    .conteudo-principal-coluna-categoria-icons {
+        display: flex;
+    }
+
+    .icon-imagem {
+        padding: 2%;
+        width: 20%;
+        border-radius: 20px;
+
+    }
+
+    .icon-texto {
+        margin: 1%;
+    }
+
+    .icons {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+    .icon {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+
+    h4 {
+        margin: 2%;
+    }
+
+    h5{
+        margin: 5%;
+    }
+</style>
+
+<body>
+    <header class="cabecalho">
+
+        <nav class="menu">
+            <a class="cabecalho-menu-item" href="">Ajuda</a>
+            <a class="cabecalho-menu-item" href="">Entrar</a>
+            <a class="cabecalho-menu-item" href="">Cadastre-se </a>
+        </nav>
+    </header>
+
+    <header class="cabecalho-2">
+
+        <nav class="menu">
+            <a class="cabecalho-menu-item" href="">Presentes</a>
+            <a class="cabecalho-menu-item" href="">Lançamentos</a>
+            <a class="cabecalho-menu-item" href="">Feminino</a>
+            <a class="cabecalho-menu-item" href="">Masculino</a>
+            <a class="cabecalho-menu-item" href="">Infantil</a>
+            <a class="cabecalho-menu-item" href="">SNKRS</a>
+            <a class="cabecalho-menu-item" href="">Ícones</a>
+
+            <form class="cabecalho-menu-item-buscar" href="">
+                <input class="cabecalho-menu-item-buscar-inserir" type="text" placeholder="Buscar">
+                <button class="cabecalho-menu-item-buscar-botao" type="submit"></button>
+            </form>
+
+        </nav>
+    </header>
+
+    <main class="conteudo-principal">
+        <div class="conteudo-principal-coluna">
+            <div class="conteudo-principal-coluna-categoria">
+                <h4>Categorias</h4>
+                <hr>
+                <div class="conteudo-principal-coluna-categoria-icons">
+                    <div class="icons">
+                        <div class="icon">
+                            <img class="icon-imagem" src="https://imgnike-a.akamaihd.net/768x768/0166185L.jpg">
+                            <p class="icon-texto">Categoria</p>
+                        </div>
+                        <div class="icon">
+                            <img class="icon-imagem" src="https://imgnike-a.akamaihd.net/768x768/0166185L.jpg">
+                            <p class="icon-texto">Categoria</p>
+                        </div>
+                        <div class="icon">
+                            <img class="icon-imagem" src="https://imgnike-a.akamaihd.net/768x768/0166185L.jpg">
+                            <p class="icon-texto">Categoria</p>
+                        </div>
+                        <div class="icon">
+                            <img class="icon-imagem" src="https://imgnike-a.akamaihd.net/768x768/0166185L.jpg">
+                            <p class="icon-texto">Categoria</p>
+                        </div>
+                        <div class="icon">
+                            <img class="icon-imagem" src="https://imgnike-a.akamaihd.net/768x768/0166185L.jpg">
+                            <p class="icon-texto">Categoria</p>
+                        </div>
+                        <div class="icon">
+                            <img class="icon-imagem" src="https://imgnike-a.akamaihd.net/768x768/0166185L.jpg">
+                            <p class="icon-texto">Categoria</p>
+                        </div>
+
+                        <div class="icon">
+                            <img class="icon-imagem" src="https://imgnike-a.akamaihd.net/768x768/0166185L.jpg">
+                            <p class="icon-texto">Categoria</p>
+                        </div>
+
+                        <div class="icon">
+                            <img class="icon-imagem" src="https://imgnike-a.akamaihd.net/768x768/0166185L.jpg">
+                            <p class="icon-texto">Categoria</p>
+                        </div>
+
+                        <div class="icon">
+                            <img class="icon-imagem" src="https://imgnike-a.akamaihd.net/768x768/0166185L.jpg">
+                            <p class="icon-texto">Categoria</p>
+                        </div>
+
+                    </div>
+                </div>
+                <br>
+                <h4>Guia</h4>
+                <hr>
+                <h5>Guia</h5>
+                <h5>Guia</h5>
+                <h5>Guia</h5>
+                <h5>Guia</h5>
+                <h5>Guia</h5>
+
+                <hr>
+            </div>
+        </div>
+        </div>
+        <div class="conteudo-principal-cards">
+            <div class="card-grande">
+                <img class="card-imagem" src="https://imgnike-a.akamaihd.net/768x768/0166185L.jpg">
+                <p>Tênis</p>
+            </div><br>
+
+            <div class="cards-medio">
+                <div class="card-medio">
+                    <img class="card-imagem" src="https://imgnike-a.akamaihd.net/768x768/0166185L.jpg">
+                    <p>Tênis</p>
+                </div>
+                <div class="card-medio">
+                    <img class="card-imagem" src="https://imgnike-a.akamaihd.net/768x768/0166185L.jpg">
+                    <p>Tênis</p>
+                </div>
+                <div class="card-medio">
+                    <img class="card-imagem" src="https://imgnike-a.akamaihd.net/768x768/0166185L.jpg">
+                    <p>Tênis</p>
+                </div>
+            </div>
+            <br>
+            <hr>
+            <h4>Produtos Recentes</h4>
+
+            <div class="cards">
+                <div class="card">
+                    <img class="card-imagem" src="https://imgnike-a.akamaihd.net/768x768/0166185L.jpg">
+                    <p>Tênis</p>
+                    <p>R$1000.00</p>
+                </div>
+                <div class="card">
+                    <img class="card-imagem" src="https://imgnike-a.akamaihd.net/768x768/0166185L.jpg">
+                    <p>Tênis</p>
+                    <p>R$1000.00</p>
+                </div>
+                <div class="card">
+                    <img class="card-imagem" src="https://imgnike-a.akamaihd.net/768x768/0166185L.jpg">
+                    <p>Tênis</p>
+                    <p>R$1000.00</p>
+                </div>
+                <div class="card">
+                    <img class="card-imagem" src="https://imgnike-a.akamaihd.net/768x768/0166185L.jpg">
+                    <p>Tênis</p>
+                    <p>R$1000.00</p>
+                </div>
+                <div class="card">
+                    <img class="card-imagem" src="https://imgnike-a.akamaihd.net/768x768/0166185L.jpg">
+                    <p>Tênis</p>
+                    <p>R$1000.00</p>
+                </div>
+                <div class="card">
+                    <img class="card-imagem" src="https://imgnike-a.akamaihd.net/768x768/0166185L.jpg">
+                    <p>Tênis</p>
+                    <p>R$1000.00</p>
+                </div>
+                <div class="card">
+                    <img class="card-imagem" src="https://imgnike-a.akamaihd.net/768x768/0166185L.jpg">
+                    <p>Tênis</p>
+                    <p>R$1000.00</p>
+                </div>
+                <div class="card">
+                    <img class="card-imagem" src="https://imgnike-a.akamaihd.net/768x768/0166185L.jpg">
+                    <p>Tênis</p>
+                    <p>R$1000.00</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <br>
+    <br><br>
+    <a href="index.html">Exercícios</a>
+</body>
+
+</html>
